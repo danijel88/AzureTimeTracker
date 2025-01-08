@@ -89,9 +89,13 @@ namespace AzureTimeTracker
             s = 0;
             ms = 0;
             label1.Text = "00:00:00";
+            lblTotalTime.Text = string.Empty;
+            lblItemId.Text = string.Empty;
         }
         private async Task FetchTasksAsync()
         {
+            lbTasks.Items.Clear();
+            _keyValuePair.Clear();
 
             using (var client = new HttpClient())
             {

@@ -36,8 +36,6 @@
             button1 = new Button();
             groupBox1 = new GroupBox();
             btnSave = new Button();
-            txtDescription = new RichTextBox();
-            label4 = new Label();
             lblTotalTime = new Label();
             label3 = new Label();
             lblItemId = new Label();
@@ -125,8 +123,6 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(btnSave);
-            groupBox1.Controls.Add(txtDescription);
-            groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(lblTotalTime);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(lblItemId);
@@ -134,7 +130,7 @@
             groupBox1.ForeColor = Color.White;
             groupBox1.Location = new Point(358, 197);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(366, 280);
+            groupBox1.Size = new Size(366, 164);
             groupBox1.TabIndex = 6;
             groupBox1.TabStop = false;
             groupBox1.Text = "DATA TO SAVE:";
@@ -145,31 +141,13 @@
             btnSave.FlatStyle = FlatStyle.Popup;
             btnSave.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSave.ForeColor = Color.White;
-            btnSave.Location = new Point(17, 225);
+            btnSave.Location = new Point(17, 98);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(321, 39);
             btnSave.TabIndex = 7;
             btnSave.Text = "SAVE";
             btnSave.UseVisualStyleBackColor = false;
             btnSave.Click += btnSave_Click;
-            // 
-            // txtDescription
-            // 
-            txtDescription.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtDescription.Location = new Point(17, 112);
-            txtDescription.Name = "txtDescription";
-            txtDescription.Size = new Size(321, 96);
-            txtDescription.TabIndex = 5;
-            txtDescription.Text = "";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(6, 94);
-            label4.Name = "label4";
-            label4.Size = new Size(70, 15);
-            label4.TabIndex = 4;
-            label4.Text = "Description:";
             // 
             // lblTotalTime
             // 
@@ -214,7 +192,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(29, 38, 48);
-            ClientSize = new Size(760, 489);
+            ClientSize = new Size(760, 400);
             Controls.Add(groupBox1);
             Controls.Add(button1);
             Controls.Add(lbTasks);
@@ -248,7 +226,5 @@
         private Label label3;
         private Label lblTotalTime;
         private Button btnSave;
-        private RichTextBox txtDescription;
-        private Label label4;
     }
 }
