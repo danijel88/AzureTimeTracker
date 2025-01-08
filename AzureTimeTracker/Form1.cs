@@ -158,6 +158,9 @@ namespace AzureTimeTracker
                     string errorDetails = await response.Content.ReadAsStringAsync();
                     MessageBox.Show($"Failed to execute WIQL query: {errorDetails}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                label1.Text = "00:00:00";
+                lblItemId.Text = string.Empty;
+                lblTotalTime.Text = string.Empty;
             }
         }
         private async Task PushTimeToTaskAsync(string taskId, string elapsedTime)
@@ -217,6 +220,7 @@ namespace AzureTimeTracker
             }
 
             await PushTimeToTaskAsync(lblItemId.Text, lblTotalTime.Text);
+
         }
     }
 }
